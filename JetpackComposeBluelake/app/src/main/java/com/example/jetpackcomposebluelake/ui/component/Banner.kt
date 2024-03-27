@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpackcomposebluelake.R
+import com.example.jetpackcomposebluelake.logic.BannerInfo
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
@@ -53,12 +54,6 @@ fun Banner(bannerPhoto : Int, bannerInfo: BannerInfo){
                 },
             )
     }
-}
-
-enum class BannerInfo {
-    AbsenKosong,
-    Jadwal,
-    AbsenGps,
 }
 
 @Preview(showBackground = true)

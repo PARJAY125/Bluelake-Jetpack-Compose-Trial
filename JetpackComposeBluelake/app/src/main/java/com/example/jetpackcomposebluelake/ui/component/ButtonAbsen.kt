@@ -101,14 +101,14 @@ fun selasa() {
                     Spacer(modifier = Modifier.height(12.dp))
                 }
                 Row{
-                    Image(
-                        painter = painterResource(id = R.drawable.silang),
-                        contentDescription = "Silang",
-                        modifier = Modifier.size(40.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.centang),
-                        contentDescription = "centang",
-                        modifier = Modifier.size(40.dp))
+//                    Image(
+//                        painter = painterResource(id = R.drawable.silang),
+//                        contentDescription = "Silang",
+//                        modifier = Modifier.size(40.dp))
+//                    Image(
+//                        painter = painterResource(id = R.drawable.centang),
+//                        contentDescription = "centang",
+//                        modifier = Modifier.size(40.dp))
                 }
             }
         }
