@@ -1,4 +1,4 @@
-package com.example.jackpackcompose
+package com.example.jetpackcomposebluelake.ui.component
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,13 +8,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -22,17 +19,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.jackpackcompose.ui.theme.JackPackComposeTheme
+import com.example.jetpackcomposebluelake.R
+import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 class Absensi : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JackPackComposeTheme {
+            JetpackComposeBluelakeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -119,13 +116,7 @@ fun Banner1(bannerPhoto : Int){
 
     }
 }
-@Composable
-fun OpacityText(
-    text: String,
-    initialAlpha: Float,
-    targetAlpha: Float,
-    durationMillis: Int
-){}
+
 @Composable
 fun Banner2(bannerPhoto : Int){
     Column (
@@ -133,7 +124,7 @@ fun Banner2(bannerPhoto : Int){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Image(painter = painterResource(id =  bannerPhoto)
+        Image(painter = painterResource(id = bannerPhoto)
             , contentDescription = "image"
             , modifier = Modifier.width(300.dp)
         )
@@ -145,23 +136,23 @@ fun Banner2(bannerPhoto : Int){
 @Preview(showBackground = true)
 @Composable
 fun BannerAbsenKosongPreview() {
-    JackPackComposeTheme {
-        Banner(R.drawable.gani)
+    JetpackComposeBluelakeTheme {
+        Banner(R.drawable.absen)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun BannerJadwalPreview() {
-    JackPackComposeTheme {
-        Banner1(R.drawable.absenjadwal)
+    JetpackComposeBluelakeTheme {
+//        Banner1(R.drawable.gps)
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun BannerAbsenGpsPreview() {
-    JackPackComposeTheme {
-        Banner2(R.drawable.gps)
+    JetpackComposeBluelakeTheme {
+//        Banner2(R.drawable.lokasi)
     }
 }
