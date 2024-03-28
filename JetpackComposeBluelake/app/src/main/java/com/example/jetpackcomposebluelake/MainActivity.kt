@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackcomposebluelake.ui.Navigation
 import com.example.jetpackcomposebluelake.ui.screen.AbsensiScreen
 import com.example.jetpackcomposebluelake.ui.screen.AlamatEmailTerkirim
 import com.example.jetpackcomposebluelake.ui.screen.HistoryAbsen
@@ -48,7 +49,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyApp()
+                    Navigation()
                 }
             }
         }
@@ -95,51 +96,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun GreetingPreview() {
     JetpackComposeBluelakeTheme {
         Greeting("Android")
-    }
-}
-
-
-// Navigation
-@Composable
-fun MyApp() {
-    val navController = rememberNavController()
-
-    NavHost(navController, startDestination = "loginScreen") {
-        composable("loginScreen") {
-            LoginScreen(navController)
-        }
-        composable("registerKaryawan") {
-            RegisterKaryawan(navController)
-        }
-        composable("registerPerusahaan") {
-            RegisterPerusahaan(navController)
-        }
-        composable("lupaKataSandiScreen") {
-            LupaKataSandi(navController)
-        }
-        composable("alamatEmailTerkirim") {
-            AlamatEmailTerkirim(navController)
-        }
-        composable("profilePage") {
-            ProfilePage(navController)
-        }
-        composable("homePage") {
-            HomePage(navController)
-        }
-        composable("absensiHistory") {
-            HistoryAbsen(navController)
-        }
-        composable("cutiHistory") {
-            HistoryCuti(navController)
-        }
-        composable("absenPage") {
-            AbsensiScreen(navController)
-        }
-        composable("pengajuanPage") {
-            PengajuanScreen(navController)
-        }
-        composable("walletPage") {
-            WalletScreen(navController)
-        }
     }
 }

@@ -14,16 +14,16 @@ import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 fun HistoryAbsen(navController: NavController){
     Column {
         Row {
-            Button(onClick = { navController.navigate("absensiPage") }) {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
                 Text(text = "Absensi")
             }
-            Button(onClick = { navController.navigate("cutiPage") }) {
+            Button(onClick = { navController.navigate("cutiHistory") }) {
                 Text(text = "Cuti")
             }
         }
         Column {
             Button(onClick = { /*TODO*/ }) {
-                Text(text = "Detail Absen")
+                Text(text = "Detail Cuti")
             }
         }
         Row {
