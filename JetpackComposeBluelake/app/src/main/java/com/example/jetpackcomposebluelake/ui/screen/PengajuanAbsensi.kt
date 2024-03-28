@@ -9,13 +9,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
+// TODO : Rename Pengajuan Ijin
 @Composable
 fun PengajuanAftherLogin() {
     Column (
         modifier = Modifier.fillMaxSize()
     ){
         Button(onClick = { /*TODO*/ }) {
-            Text(text = "Kirim Pengajuan ")
+            Text(text = "Kirim Pengajuan")
         }
         Button(onClick = { /*TODO*/ }) {
             Text(text = "Beranda")

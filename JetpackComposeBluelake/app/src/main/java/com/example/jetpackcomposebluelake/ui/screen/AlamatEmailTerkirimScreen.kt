@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun alamatEmailTerkirim(){
+fun AlamatEmailTerkirim(){
     Button(onClick = { /*TODO*/ }) {
         Text(text = "Kembali")
     }
@@ -16,8 +16,8 @@ fun alamatEmailTerkirim(){
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
-fun alamatEmailTerkirimPreview() {
+fun AlamatEmailTerkirimPreview() {
     JetpackComposeBluelakeTheme {
-        alamatEmailTerkirim()
+        AlamatEmailTerkirim()
     }
 }

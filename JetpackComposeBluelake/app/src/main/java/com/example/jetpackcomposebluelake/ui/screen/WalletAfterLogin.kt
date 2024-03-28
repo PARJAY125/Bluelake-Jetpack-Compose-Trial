@@ -28,8 +28,7 @@ fun WalletAftherLogin() {
         }
         Button(onClick = { /*TODO*/ }) {
             Text(text = "Wallet")
-        }
-    }
+        }    }
 }
 
 @Preview(showBackground = true)
