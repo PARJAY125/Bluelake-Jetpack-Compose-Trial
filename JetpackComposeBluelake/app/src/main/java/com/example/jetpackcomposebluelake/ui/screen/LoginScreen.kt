@@ -3,14 +3,14 @@ package com.example.jetpackcomposebluelake.ui.screen
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcomposebluelake.ui.component.KeteranganJamKerja
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-    fun loginScreen(){
+    fun LoginScreen(){
         Row {
             Button(onClick = { /*TODO*/ }) {
                 Text(text = "Masuk")
@@ -30,6 +30,8 @@ import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 @Composable
 fun LoginScreenPreview() {
     JetpackComposeBluelakeTheme {
-        loginScreen()
+        Surface{
+            LoginScreen()
+        }
     }
 }
