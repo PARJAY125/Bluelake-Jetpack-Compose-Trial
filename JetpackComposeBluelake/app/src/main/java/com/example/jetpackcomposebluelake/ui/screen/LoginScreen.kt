@@ -11,18 +11,16 @@ import com.example.jetpackcomposebluelake.ui.component.KeteranganJamKerja
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-    fun loginScreen(navController: NavController){
+    fun LoginScreen(navController: NavController){
         Row {
-            Button(onClick = { navController.navigate("HomePageScreen") }) {
+            Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Masuk")
             }
-            Button(onClick = { navController.navigate("screen2") }) {
+            Button(onClick = { navController.navigate("registerKaryawan") }) {
                 Text(text = "Daftar Sekarang")
             }
-            Button(onClick = { navController.navigate("screen2") }) {
+            Button(onClick = { navController.navigate("lupaKataSandiScreen") }) {
                 Text(text = "Lupa Kata Sandi")
             }
         }
     }
-
-

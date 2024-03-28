@@ -7,45 +7,46 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun homePage(){
+fun HomePage(navController: NavController){
     Column {
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("profilePage") }) {
                 Text(text = "Profile")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("loginScreen") }) {
                 Text(text = "Keluar")
             }
         }
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Home")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
                 Text(text = "History")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absenPage") }) {
                 Text(text = "Absen")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("PengajuanPage") }) {
                 Text(text = "Pengajuan")
             }
 
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("walletPage") }) {
             Text(text = "Wallet")
         }
     }
 }
 
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
-@Composable
-fun loginPagePreview() {
-    JetpackComposeBluelakeTheme {
-        homePage()
-    }
-}
+//@Preview(showBackground = true)
+//@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
+//@Composable
+//fun loginPagePreview() {
+//    JetpackComposeBluelakeTheme {
+//        homePage()
+//    }
+//}

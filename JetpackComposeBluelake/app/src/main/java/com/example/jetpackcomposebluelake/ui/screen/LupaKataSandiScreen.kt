@@ -6,24 +6,27 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun lupaKataSandi(){
+fun LupaKataSandi(navController: NavController){
     Column {
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("alamatEmailTerkirim") }) {
             Text(text = "Kirim")
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("loginScreen") }) {
             Text(text = "Kembali")
         }
     }
 }
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
-@Composable
-fun lupaKataSandiPreview() {
-    JetpackComposeBluelakeTheme {
-        lupaKataSandi()
-    }
-}
+
+
+//@Preview(showBackground = true)
+//@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
+//@Composable
+//fun LupaKataSandiPreview() {
+//    JetpackComposeBluelakeTheme {
+//        LupaKataSandi(navController =)
+//    }
+//}

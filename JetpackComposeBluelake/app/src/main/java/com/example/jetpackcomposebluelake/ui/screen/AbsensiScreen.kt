@@ -7,33 +7,31 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
-// TODO : Rename Pengajuan Ijin
+// TODO : Ganti Nama Yang Lebih Rapi
+
 @Composable
-fun PengajuanScreen(navController: NavController) {
+fun AbsensiScreen(navController: NavController) {
     Column{
         Button(onClick = { /*TODO*/ }) {
-            Text(text = "Kirim Pengajuan")
+            Text(text = "Absen Sekarang")
         }
         Row {
-            Button(onClick = { navController.navigate("homePage") }) {
-                Text(text = "Home")
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Beranda")
             }
-            Button(onClick = { navController.navigate("absensiHistory") }) {
+            Button(onClick = { /*TODO*/ }) {
                 Text(text = "History")
             }
-            Button(onClick = { navController.navigate("absenPage") }) {
+            Button(onClick = { /*TODO*/ }) {
                 Text(text = "Absen")
             }
-            Button(onClick = { navController.navigate("PengajuanPage") }) {
+            Button(onClick = { /*TODO*/ }) {
                 Text(text = "Pengajuan")
             }
-
         }
-        Button(onClick = { navController.navigate("walletPage") }) {
+        Button(onClick = { /*TODO*/ }) {
             Text(text = "Wallet")
         }
     }

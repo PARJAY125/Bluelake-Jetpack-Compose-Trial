@@ -11,13 +11,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
-// TODO : Rename Pengajuan Ijin
 @Composable
-fun PengajuanScreen(navController: NavController) {
-    Column{
-        Button(onClick = { /*TODO*/ }) {
-            Text(text = "Kirim Pengajuan")
-        }
+fun WalletScreen(navController: NavController) {
+    Column {
         Row {
             Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Home")

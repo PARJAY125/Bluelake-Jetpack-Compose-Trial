@@ -5,19 +5,23 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun AlamatEmailTerkirim(){
-    Button(onClick = { /*TODO*/ }) {
+fun AlamatEmailTerkirim(navController: NavController){
+    Button(onClick = { navController.navigate("LoginScreen") }) {
         Text(text = "Kembali")
     }
 }
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
-@Composable
-fun AlamatEmailTerkirimPreview() {
-    JetpackComposeBluelakeTheme {
-        AlamatEmailTerkirim()
-    }
-}
+
+
+
+//@Preview(showBackground = true)
+//@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
+//@Composable
+//fun AlamatEmailTerkirimPreview() {
+//    JetpackComposeBluelakeTheme {
+//        AlamatEmailTerkirim()
+//    }
+//}
