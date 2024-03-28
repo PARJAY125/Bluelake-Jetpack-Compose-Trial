@@ -6,6 +6,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
@@ -24,3 +25,15 @@ fun AlamatEmailTerkirimPreview() {
         }
     }
 }
+
+
+
+
+//@Preview(showBackground = true)
+//@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
+//@Composable
+//fun AlamatEmailTerkirimPreview() {
+//    JetpackComposeBluelakeTheme {
+//        AlamatEmailTerkirim()
+//    }
+//}

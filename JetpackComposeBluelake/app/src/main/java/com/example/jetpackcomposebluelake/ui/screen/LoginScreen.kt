@@ -7,23 +7,34 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.jetpackcomposebluelake.presentation.user.UserEvent
+import com.example.jetpackcomposebluelake.presentation.user.UserState
+import com.example.jetpackcomposebluelake.ui.component.KeteranganJamKerja
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
-@Composable
-    fun LoginScreen(){
-        Row {
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = "Masuk")
-            }
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = "Daftar Sekarang")
-            }
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = "Lupa Kata Sandi")
-            }
+import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
+
+@Composable
+fun LoginScreen(
+    navController: NavController,
+    userState: UserState,
+    onEvent: (UserEvent)->Unit
+){
+    Row {
+        Button(onClick = { navController.navigate("homePage") }) {
+            Text(text = "Masuk")
+        }
+        Button(onClick = { navController.navigate("registerKaryawan") }) {
+            Text(text = "Daftar Sekarang")
+        }
+        Button(onClick = { navController.navigate("lupaKataSandiScreen") }) {
+            Text(text = "Lupa Kata Sandi")
         }
     }
+}
 
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
@@ -31,7 +42,9 @@ import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 fun LoginScreenPreview() {
     JetpackComposeBluelakeTheme {
         Surface{
-            LoginScreen()
+//            LoginScreen(rememberNavController())
         }
     }
 }
+
+

@@ -8,14 +8,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+
 
 @Composable
-fun ProfilePage(){
+fun ProfilePage(navController: NavController){
     Column {
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("homePage") }) {
             Text(text ="Back")
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("loginScreen") }) {
             Text(text = "Keluar")
         }
     }
@@ -27,7 +30,7 @@ fun ProfilePage(){
 fun ProfilePagePreview() {
     JetpackComposeBluelakeTheme {
         Surface {
-            ProfilePage()
+            ProfilePage(rememberNavController())
         }
     }
 }

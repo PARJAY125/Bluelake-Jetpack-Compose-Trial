@@ -15,11 +15,12 @@ fun DataMasuk() {
         modifier = Modifier.fillMaxSize()
     ){
         Button(onClick = { /*TODO*/ }) {
-            Text(text = "Kemabali")
+            Text(text = "Kembali")
         }
         Button(onClick = { /*TODO*/ }) {
             Text(text = "Absen Sekarang")
         }
+
         Button(onClick = { /*TODO*/ }) {
             Text(text = "Foto Ulang")
         }

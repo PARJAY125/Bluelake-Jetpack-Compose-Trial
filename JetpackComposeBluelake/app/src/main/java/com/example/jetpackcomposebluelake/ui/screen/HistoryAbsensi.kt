@@ -8,16 +8,18 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun HistoryAbsen(){
+fun HistoryAbsen(navController: NavController){
     Column {
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absensiPage") }) {
                 Text(text = "Absensi")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("cutiPage") }) {
                 Text(text = "Cuti")
             }
         }
@@ -46,13 +48,57 @@ fun HistoryAbsen(){
     }
 }
 
+@Composable
+
+fun HistoryCuti(navController: NavController){
+    Column {
+        Row {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
+                Text(text = "Absensi")
+            }
+            Button(onClick = { navController.navigate("cutiHistory") }) {
+                Text(text = "Cuti")
+            }
+        }
+        Column {
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Detail Cuti")
+            }
+        }
+        Row {
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Home")
+            }
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "History")
+            }
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Absen")
+            }
+            Button(onClick = { /*TODO*/ }) {
+                Text(text = "Pengajuan")
+            }
+        }
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "Wallet")
+        }}}
+
+
+
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
-fun HistoryAbsenPreview() {
+fun historyCutiPreview() {
     JetpackComposeBluelakeTheme {
-        Surface {
-            HistoryAbsen()
-        }
+        HistoryCuti(rememberNavController())
+    }
+}
+
+@Preview(showBackground = true)
+@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
+@Composable
+fun historyAbsenPreview() {
+    JetpackComposeBluelakeTheme {
+        HistoryAbsen(rememberNavController())
     }
 }
