@@ -88,7 +88,7 @@ fun HistoryCuti(navController: NavController){
         }}}
 
         }
-        
+
 
 
 @Preview(showBackground = true)

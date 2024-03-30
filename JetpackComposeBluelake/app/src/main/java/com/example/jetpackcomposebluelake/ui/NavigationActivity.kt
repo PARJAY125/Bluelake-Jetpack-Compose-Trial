@@ -9,6 +9,7 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackcomposebluelake.MyApp
 import com.example.jetpackcomposebluelake.di.MyApp
 import com.example.jetpackcomposebluelake.presentation.user.UserEvent
 import com.example.jetpackcomposebluelake.presentation.user.UserState
