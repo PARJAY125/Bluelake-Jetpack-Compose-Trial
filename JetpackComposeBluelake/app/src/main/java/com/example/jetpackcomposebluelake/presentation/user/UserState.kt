@@ -4,5 +4,5 @@ import com.example.jetpackcomposebluelake.model.User
 
 
 data class UserState(
-        val outlets: List<User> = emptyList()
-    )
+    val userListState: List<User> = emptyList()
+)

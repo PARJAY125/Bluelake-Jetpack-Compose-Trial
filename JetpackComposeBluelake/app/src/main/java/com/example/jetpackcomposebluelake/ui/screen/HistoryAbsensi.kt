@@ -66,21 +66,23 @@ fun HistoryCuti(navController: NavController){
             }
         }
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Home")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
                 Text(text = "History")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absenPage") }) {
                 Text(text = "Absen")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("PengajuanPage") }) {
                 Text(text = "Pengajuan")
             }
+
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("walletPage") }) {
             Text(text = "Wallet")
+
         }}}
 
 

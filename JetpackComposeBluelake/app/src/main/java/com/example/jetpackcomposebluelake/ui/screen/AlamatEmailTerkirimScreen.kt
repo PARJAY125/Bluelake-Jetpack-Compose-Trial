@@ -10,8 +10,8 @@ import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun AlamatEmailTerkirim(){
-    Button(onClick = { /*TODO*/ }) {
+fun AlamatEmailTerkirim(navController : NavController){
+    Button(onClick = {  navController.navigate("loginScreen") }) {
         Text(text = "Kembali")
     }
 }
@@ -21,7 +21,7 @@ fun AlamatEmailTerkirim(){
 fun AlamatEmailTerkirimPreview() {
     JetpackComposeBluelakeTheme {
         Surface {
-            AlamatEmailTerkirim()
+//            AlamatEmailTerkirim(/)
         }
     }
 }

@@ -1,9 +1,18 @@
 package com.example.jetpackcomposebluelake.ui
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.graphics.BlendMode.Companion.Screen
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackcomposebluelake.di.MyApp
+import com.example.jetpackcomposebluelake.presentation.user.UserEvent
+import com.example.jetpackcomposebluelake.presentation.user.UserState
+import com.example.jetpackcomposebluelake.presentation.user.UserViewModel
 import com.example.jetpackcomposebluelake.ui.screen.AbsensiScreen
 import com.example.jetpackcomposebluelake.ui.screen.AlamatEmailTerkirim
 import com.example.jetpackcomposebluelake.ui.screen.HistoryAbsen
@@ -15,6 +24,7 @@ import com.example.jetpackcomposebluelake.ui.screen.PengajuanScreen
 import com.example.jetpackcomposebluelake.ui.screen.ProfilePage
 import com.example.jetpackcomposebluelake.ui.screen.RegisterKaryawan
 import com.example.jetpackcomposebluelake.ui.screen.RegisterPerusahaan
+import com.example.jetpackcomposebluelake.ui.screen.UserListScreen
 import com.example.jetpackcomposebluelake.ui.screen.WalletScreen
 
 @Composable
@@ -23,7 +33,20 @@ fun Navigation() {
 
     NavHost(navController, startDestination = "loginScreen") {
         composable("loginScreen") {
-            LoginScreen(navController)
+
+            @Composable
+            fun NestedOutletListScreen(
+                outletVM: UserViewModel = viewModel(
+                    factory = viewModelFactory {
+                        UserViewModel(MyApp.appModule.userRepository)
+                    }
+                )
+            ) {
+                val outletState by outletVM.state.collectAsState(initial = UserState())
+                UserListScreen(outletState, outletVM::onEvent)
+            }
+
+            NestedOutletListScreen()
         }
         composable("registerKaryawan") {
             RegisterKaryawan(navController)
