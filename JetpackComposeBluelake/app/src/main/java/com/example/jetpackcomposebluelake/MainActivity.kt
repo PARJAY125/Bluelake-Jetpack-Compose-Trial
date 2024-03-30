@@ -24,6 +24,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpackcomposebluelake.data.DummyData
+import com.example.jetpackcomposebluelake.presentation.user.UserState
 import com.example.jetpackcomposebluelake.ui.Navigation
 import com.example.jetpackcomposebluelake.ui.screen.AbsensiScreen
 import com.example.jetpackcomposebluelake.ui.screen.AlamatEmailTerkirim
@@ -36,6 +38,7 @@ import com.example.jetpackcomposebluelake.ui.screen.PengajuanScreen
 import com.example.jetpackcomposebluelake.ui.screen.ProfilePage
 import com.example.jetpackcomposebluelake.ui.screen.RegisterKaryawan
 import com.example.jetpackcomposebluelake.ui.screen.RegisterPerusahaan
+import com.example.jetpackcomposebluelake.ui.screen.UserListScreen
 import com.example.jetpackcomposebluelake.ui.screen.WalletScreen
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
@@ -49,7 +52,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Navigation()
+                    UserListScreen(
+                        UserState(DummyData.dummyUsersFlow),
+                        onEvent = {}
+                    )
                 }
             }
         }

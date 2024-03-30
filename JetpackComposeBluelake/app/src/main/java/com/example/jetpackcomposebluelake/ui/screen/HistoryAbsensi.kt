@@ -71,6 +71,7 @@ fun HistoryCuti(navController: NavController){
                 Text(text = "Home")
             }
             Button(onClick = { navController.navigate("cutiHistory") }) {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
                 Text(text = "History")
             }
             Button(onClick = { navController.navigate("absenPage") }) {
@@ -84,9 +85,10 @@ fun HistoryCuti(navController: NavController){
         Button(onClick = { navController.navigate("walletPage") }) {
             Text(text = "Wallet")
 
+        }}}
+
         }
-    }
-}
+        
 
 
 @Preview(showBackground = true)

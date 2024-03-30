@@ -14,11 +14,11 @@ class UserViewModel(
 ): ViewModel() {
     private val _state = MutableStateFlow(UserState())
 
-    private val _outlet = userRepository.getAllOutlets().stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+    private val _outlet = userRepository.getAllUser().stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    val state = combine(_state, _outlet) { state, outlet ->
+    val state = combine(_state, _outlet) { state, users ->
         state.copy(
-            outlets = outlet
+            userListState = users
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), UserState())
 

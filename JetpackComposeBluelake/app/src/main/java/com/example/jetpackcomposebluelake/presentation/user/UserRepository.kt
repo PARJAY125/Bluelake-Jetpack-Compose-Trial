@@ -1,12 +1,15 @@
 package com.example.jetpackcomposebluelake.presentation.user
 
 import android.provider.SyncStateContract.Helpers.insert
+import com.example.jetpackcomposebluelake.data.DummyData
 import com.example.jetpackcomposebluelake.model.User
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOf
 
 class UserRepository() {
 
-    fun getAllOutlets(): Flow<List<User>> = getAllOutlets()
+    fun getAllUser(): Flow<List<User>> = flowOf(DummyData.dummyUsersFlow)
 
     suspend fun insertUser(user: User) {
         insertUser(user)
