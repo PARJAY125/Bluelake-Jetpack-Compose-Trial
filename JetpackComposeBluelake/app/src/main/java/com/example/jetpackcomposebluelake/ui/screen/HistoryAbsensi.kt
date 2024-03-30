@@ -24,32 +24,33 @@ fun HistoryAbsen(navController: NavController){
             }
         }
         Column {
-            Button(onClick = { /*TODO*/ }) {
-                Text(text = "Detail Cuti")
+            Button(onClick = { navController.navigate("detailAbsen") }) {
+                Text(text = "Detail Absen")
             }
         }
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Home")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absensiHistory") }) {
                 Text(text = "History")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absenPage") }) {
                 Text(text = "Absen")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("PengajuanPage") }) {
                 Text(text = "Pengajuan")
             }
+
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("walletPage") }) {
             Text(text = "Wallet")
         }
+        Text(text = "Absen")
     }
 }
 
 @Composable
-
 fun HistoryCuti(navController: NavController){
     Column {
         Row {
@@ -66,23 +67,26 @@ fun HistoryCuti(navController: NavController){
             }
         }
         Row {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("homePage") }) {
                 Text(text = "Home")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("cutiHistory") }) {
                 Text(text = "History")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("absenPage") }) {
                 Text(text = "Absen")
             }
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = { navController.navigate("PengajuanPage") }) {
                 Text(text = "Pengajuan")
             }
-        }
-        Button(onClick = { /*TODO*/ }) {
-            Text(text = "Wallet")
-        }}}
 
+        }
+        Button(onClick = { navController.navigate("walletPage") }) {
+            Text(text = "Wallet")
+
+        }
+    }
+}
 
 
 @Preview(showBackground = true)
@@ -91,14 +95,8 @@ fun HistoryCuti(navController: NavController){
 fun historyCutiPreview() {
     JetpackComposeBluelakeTheme {
         HistoryCuti(rememberNavController())
+        }
+        Text(text = "Cuti")
     }
-}
 
-@Preview(showBackground = true)
-@Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
-@Composable
-fun historyAbsenPreview() {
-    JetpackComposeBluelakeTheme {
-        HistoryAbsen(rememberNavController())
-    }
-}
+

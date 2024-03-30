@@ -7,30 +7,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 @Composable
-fun DataMasuk() {
+fun DataMasuk(navController: NavController) {
     Column (
         modifier = Modifier.fillMaxSize()
     ){
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("absenPage") }) {
             Text(text = "Kembali")
         }
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("faceCamera") }) {
             Text(text = "Absen Sekarang")
         }
-
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("faceCamera") }) {
             Text(text = "Foto Ulang")
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DataMasukPreview() {
-    JetpackComposeBluelakeTheme {
-        DataMasuk()
+        Button(onClick = { navController.navigate("absensiSelesai") }) {
+            Text(text = "Absen Sekarang2")
+        }
     }
 }

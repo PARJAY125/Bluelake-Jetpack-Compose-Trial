@@ -5,7 +5,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposebluelake.ui.screen.AbsensiScreen
+import com.example.jetpackcomposebluelake.ui.screen.AbsensiSelesai
 import com.example.jetpackcomposebluelake.ui.screen.AlamatEmailTerkirim
+import com.example.jetpackcomposebluelake.ui.screen.AlertPengajuan
+import com.example.jetpackcomposebluelake.ui.screen.DataMasuk
+import com.example.jetpackcomposebluelake.ui.screen.DetailAbsen
+import com.example.jetpackcomposebluelake.ui.screen.FaceCamera
+import com.example.jetpackcomposebluelake.ui.screen.GetThePhotos
 import com.example.jetpackcomposebluelake.ui.screen.HistoryAbsen
 import com.example.jetpackcomposebluelake.ui.screen.HistoryCuti
 import com.example.jetpackcomposebluelake.ui.screen.HomePage
@@ -52,11 +58,35 @@ fun Navigation() {
         composable("absenPage") {
             AbsensiScreen(navController)
         }
+        composable("dataMasuk") {
+            DataMasuk(navController)
+        }
         composable("pengajuanPage") {
             PengajuanScreen(navController)
         }
         composable("walletPage") {
             WalletScreen(navController)
+        }
+        composable("pengajuanIjin") {
+            PengajuanScreen(navController)
+        }
+        composable("alertPengajuan") {
+            AlertPengajuan(navController)
+        }
+        composable("absenSelesai") {
+            DataMasuk(navController)
+        }
+        composable("faceCamera") {
+            FaceCamera(navController)
+        }
+        composable("ambilGambar") {
+            GetThePhotos(navController)
+        }
+        composable("absensiSelesai") {
+            AbsensiSelesai(navController)
+        }
+        composable("detailAbsen") {
+            DetailAbsen(navController)
         }
     }
 }

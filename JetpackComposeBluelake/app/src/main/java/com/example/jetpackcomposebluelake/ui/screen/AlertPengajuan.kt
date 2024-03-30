@@ -7,25 +7,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.example.jetpackcomposebluelake.ui.theme.JetpackComposeBluelakeTheme
 
 // TODO : Ganti Nama Yang Lebih Rapi
 
 @Composable
-fun AlertPengiriman() {
+fun AlertPengajuan(navController: NavController) {
     Column (
         modifier = Modifier.fillMaxSize()
     ){
-        Button(onClick = { /*TODO*/ }) {
+        Button(onClick = { navController.navigate("homePage") }) {
             Text(text = "Menu Utama")
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun AlertPengirimanPreview() {
-    JetpackComposeBluelakeTheme {
-        AlertPengiriman()
     }
 }

@@ -1,7 +1,7 @@
-package com.example.jetpackcomposebluelake.di
+package com.example.jetpackcomposebluelake
 
 import android.app.Application
-import com.example.jetpackcomposebluelake.AppModule
+import com.example.jetpackcomposebluelake.di.AppModuleImpl
 
 class MyApp: Application() {
     companion object {
